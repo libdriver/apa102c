@@ -10,7 +10,7 @@
 
 APA102C는 3색 RGB LED 디밍 제어 스트링용입니다. 그런 다음 IC는 CMOS 공정을 사용하여 256 회색조와 32 밝기 조정으로 출력을 조정하는 3색 RGB LED 출력 드라이버를 제공합니다. APA102는 2개의 출력 WAY를 가지고 있으며, CLK 신호를 동기화하여 수정 캐스케이드의 출력 동작을 동기화합니다.
 
-LibDriver APA102C는 LibDriver에서 출시한 apa102c의 전체 기능 드라이버입니다. APA102C는 led 쓰기 및 기타 기능을 제공합니다. LibDriver는 MISRA를 준수합니다.
+LibDriver APA102C는 LibDriver에서 출시한 APA102C의 전체 기능 드라이버입니다. APA102C는 led 쓰기 및 기타 기능을 제공합니다. LibDriver는 MISRA를 준수합니다.
 
 ### 콘텐츠
 

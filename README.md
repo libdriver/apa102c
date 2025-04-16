@@ -9,7 +9,7 @@
 
 APA102C for the three-color RGB LED dimming control string Then IC,using the CMOS process, providing three-color RGB LED output driver to adjust the output with 256 gray-scale and 32 brightness adjustment APA102 with two-output WAY ,the CLK signal by synchronization, so that the crystal cascadePiece of output movements synchronized.
 
-LibDriver APA102C is the full function driver of apa102c launched by LibDriver. APA102C provides led writing and other functions. LibDriver complies with MISRA.
+LibDriver APA102C is a full-featured driver of APA102C launched by LibDriver. APA102C provides led writing and other functions. LibDriver complies with MISRA.
 
 ### Table of Contents
 

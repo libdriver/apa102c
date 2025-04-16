@@ -10,7 +10,7 @@
 
 APA102C は 3 色 RGB LED 調光制御ストリング IC で、CMOS プロセスを使用して、256 グレースケールと 32 輝度調整機能を備えた出力を調整する 3 色 RGB LED 出力ドライバーを提供します。APA102 は 2 つの出力 WAY を備え、CLK 信号によって同期されるため、水晶カスケード ピースの出力動作が同期されます。
 
-LibDriver APA102Cは、LibDriverによって起動されたapa102cの全機能ドライバーです。 APA102Cは、LED書き込みおよびその他の機能を提供します。 LibDriverはMISRAに準拠しています。
+LibDriver APA102Cは、LibDriverによって起動されたAPA102Cの全機能ドライバーです。 APA102Cは、LED書き込みおよびその他の機能を提供します。 LibDriverはMISRAに準拠しています。
 
 ### 目次
 
