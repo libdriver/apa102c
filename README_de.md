@@ -9,7 +9,7 @@
 
 APA102C für die Steuerung der Dimmung von dreifarbigen RGB-LEDs. Dann IC, unter Verwendung des CMOS-Prozesses, der einen dreifarbigen RGB-LED-Ausgangstreiber bereitstellt, um die Ausgabe mit 256 Graustufen und 32 Helligkeitseinstellungen anzupassen. APA102 mit zwei Ausgangswegen, das CLK-Signal wird synchronisiert, sodass die Ausgangsbewegungen des Kristallkaskadenstücks synchronisiert werden.
 
-LibDriver APA102C ist der voll funktionsfähige Treiber von apa102c, der von LibDriver gestartet wurde. APA102C bietet LED-Schreiben und andere Funktionen. LibDriver entspricht MISRA.
+LibDriver APA102C ist der voll funktionsfähige Treiber von APA102C, der von LibDriver gestartet wurde. APA102C bietet LED-Schreiben und andere Funktionen. LibDriver entspricht MISRA.
 
 ### Inhaltsverzeichnis
 
