@@ -153,7 +153,7 @@ $(function(){initNavTree('driver__apa102c_8h_source.html','',''); });
 <div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span></div>
 <div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span></div>
 <div class="foldopen" id="foldopen00169" data-start="" data-end="">
-<div class="line"><a id="l00169" name="l00169"></a><span class="lineno"><a class="line" href="group__apa102c__base__driver.html#gaf5c62006f82e8f58ca5821d9460cbe00">  169</a></span><span class="preprocessor">#define APA102C_COLOR(RED, GREEN, BLUE, BRIGHTNESS)    ((uint32_t)(0xE | ((BRIGHTNESS) &amp; 0x1F)) &lt;&lt; 24) | \</span></div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno"><a class="line" href="group__apa102c__base__driver.html#gaf5c62006f82e8f58ca5821d9460cbe00">  169</a></span><span class="preprocessor">#define APA102C_COLOR(RED, GREEN, BLUE, BRIGHTNESS)    ((uint32_t)(0xE0 | ((BRIGHTNESS) &amp; 0x1F)) &lt;&lt; 24) | \</span></div>
 <div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span><span class="preprocessor">                                                       ((uint32_t)((BLUE) &amp; 0xFF) &lt;&lt; 16) | \</span></div>
 <div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span><span class="preprocessor">                                                       ((uint32_t)((GREEN) &amp; 0xFF) &lt;&lt; 8) | \</span></div>
 <div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span><span class="preprocessor">                                                       ((uint32_t)((RED) &amp; 0xFF) &lt;&lt; 0)</span></div>
