@@ -81,7 +81,7 @@ apa102c: interface is SPI.
 apa102c: driver version is 1.0.
 apa102c: min supply voltage is 5.0V.
 apa102c: max supply voltage is 5.5V.
-apa102c: max current is 200.00mA.
+apa102c: max current is 20.00mA.
 apa102c: max temperature is 70.0C.
 apa102c: min temperature is -40.0C.
 ```

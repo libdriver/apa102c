@@ -166,7 +166,7 @@ typedef struct apa102c_info_s
  *            0<= BLUE <= 255
  *            0<= BRIGHTNESS <= 31
  */
-#define APA102C_COLOR(RED, GREEN, BLUE, BRIGHTNESS)    ((uint32_t)(0xE | ((BRIGHTNESS) & 0x1F)) << 24) | \
+#define APA102C_COLOR(RED, GREEN, BLUE, BRIGHTNESS)    ((uint32_t)(0xE0 | ((BRIGHTNESS) & 0x1F)) << 24) | \
                                                        ((uint32_t)((BLUE) & 0xFF) << 16) | \
                                                        ((uint32_t)((GREEN) & 0xFF) << 8) | \
                                                        ((uint32_t)((RED) & 0xFF) << 0)
