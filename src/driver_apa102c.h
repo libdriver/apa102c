@@ -222,7 +222,7 @@ uint8_t apa102c_deinit(apa102c_handle_t *handle);
  *            - 6 temp buffer is too small
  * @note      none
  */
-uint8_t apa102c_write(apa102c_handle_t *handle, uint32_t *color, uint32_t len, uint8_t *temp, uint32_t temp_len);
+uint8_t apa102c_write(apa102c_handle_t *handle, uint32_t *color, uint16_t len, uint8_t *temp, uint16_t temp_len);
 
 /**
  * @brief     write off frame
@@ -239,7 +239,7 @@ uint8_t apa102c_write(apa102c_handle_t *handle, uint32_t *color, uint32_t len, u
  *            - 5 temp buffer is too small
  * @note      none
  */
-uint8_t apa102c_write_off(apa102c_handle_t *handle, uint32_t len, uint8_t *temp, uint32_t temp_len);
+uint8_t apa102c_write_off(apa102c_handle_t *handle, uint16_t len, uint8_t *temp, uint16_t temp_len);
 
 /**
  * @}

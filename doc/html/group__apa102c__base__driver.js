@@ -25,6 +25,6 @@ var group__apa102c__base__driver =
     [ "apa102c_deinit", "group__apa102c__base__driver.html#ga5732bd6dc194c9153d54d61ee9f9141b", null ],
     [ "apa102c_info", "group__apa102c__base__driver.html#ga17c6beff9d1181da28f837b5aed90a53", null ],
     [ "apa102c_init", "group__apa102c__base__driver.html#ga5286e2ae09430fe92e3ffae4f15db556", null ],
-    [ "apa102c_write", "group__apa102c__base__driver.html#ga5a48e0b98221113863dd64028349867d", null ],
-    [ "apa102c_write_off", "group__apa102c__base__driver.html#ga609497b802a658ab14b8bbe1707f8d3f", null ]
+    [ "apa102c_write", "group__apa102c__base__driver.html#ga7982afa73ff04d7d18dc86212cb1c55b", null ],
+    [ "apa102c_write_off", "group__apa102c__base__driver.html#ga7aa7db32089f9601db704bf08c10b883", null ]
 ];
