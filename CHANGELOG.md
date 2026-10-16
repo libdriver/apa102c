@@ -1,3 +1,9 @@
+## 1.0.5 (2026-10-17)
+
+## Bug Fixes
+
+- fix color bugs
+
 ## 1.0.4 (2026-06-22)
 
 ## Bug Fixes

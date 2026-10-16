@@ -121,9 +121,10 @@ uint8_t apa102c_init(apa102c_handle_t *handle)
  *            - 6 temp buffer is too small
  * @note      none
  */
-uint8_t apa102c_write(apa102c_handle_t *handle, uint32_t *color, uint32_t len, uint8_t *temp, uint32_t temp_len)
+uint8_t apa102c_write(apa102c_handle_t *handle, uint32_t *color, uint16_t len, uint8_t *temp, uint16_t temp_len)
 {
     uint32_t i;
+    uint16_t end_bytes;
     uint16_t byte_size;
     
     if (handle == NULL)                                                     /* check handle */
@@ -147,7 +148,12 @@ uint8_t apa102c_write(apa102c_handle_t *handle, uint32_t *color, uint32_t len, u
         return 5;                                                           /* return error */
     }
     
-    byte_size = len * 4 + 8;                                                /* get byte size */
+    end_bytes = (len + 15) / 16;                                            /* get end frame byte count */
+    if (end_bytes < 4)                                                      /* check the minimum */
+    {
+        end_bytes = 4;                                                      /* use 4 bytes */
+    }
+    byte_size = (uint16_t)(4 + len * 4 + end_bytes);                        /* get byte size */
     if (byte_size > temp_len)                                               /* check byte size */
     {
         handle->debug_print("apa102c: temp buffer is too small.\n");        /* temp buffer is too small */
@@ -165,10 +171,10 @@ uint8_t apa102c_write(apa102c_handle_t *handle, uint32_t *color, uint32_t len, u
         temp[4 + i * 4 + 2] = (color[i] >> 8) & 0xFF;                       /* set green */
         temp[4 + i * 4 + 3] = (color[i] >> 0) & 0xFF;                       /* set red */
     }
-    temp[4 + len * 4 + 0] = 0xFF;                                           /* end frame */
-    temp[4 + len * 4 + 1] = 0xFF;                                           /* end frame */
-    temp[4 + len * 4 + 2] = 0xFF;                                           /* end frame */
-    temp[4 + len * 4 + 3] = 0xFF;                                           /* end frame */
+    for (i = 0; i < end_bytes; i++)                                         /* set the end frame */
+    {
+        temp[4 + len * 4 + i] = 0xFF;                                       /* fill with 1 * n */
+    }
     
     if (handle->spi_write_cmd(temp, (uint16_t)byte_size) != 0)              /* write command */
     {
@@ -195,9 +201,10 @@ uint8_t apa102c_write(apa102c_handle_t *handle, uint32_t *color, uint32_t len, u
  *            - 5 temp buffer is too small
  * @note      none
  */
-uint8_t apa102c_write_off(apa102c_handle_t *handle, uint32_t len, uint8_t *temp, uint32_t temp_len)
+uint8_t apa102c_write_off(apa102c_handle_t *handle, uint16_t len, uint8_t *temp, uint16_t temp_len)
 {
     uint32_t i;
+    uint16_t end_bytes;
     uint16_t byte_size;
     
     if (handle == NULL)                                                     /* check handle */
@@ -215,7 +222,12 @@ uint8_t apa102c_write_off(apa102c_handle_t *handle, uint32_t len, uint8_t *temp,
         return 4;                                                           /* return error */
     }
     
-    byte_size = len * 4 + 8;                                                /* get byte size */
+    end_bytes = (len + 15) / 16;                                            /* get end frame byte count */
+    if (end_bytes < 4)                                                      /* check the minimum */
+    {
+        end_bytes = 4;                                                      /* use 4 bytes */
+    }
+    byte_size = (uint16_t)(4 + len * 4 + end_bytes);                        /* get byte size */
     if (byte_size > temp_len)                                               /* check byte size */
     {
         handle->debug_print("apa102c: temp buffer is too small.\n");        /* temp buffer is too small */
@@ -233,10 +245,10 @@ uint8_t apa102c_write_off(apa102c_handle_t *handle, uint32_t len, uint8_t *temp,
         temp[4 + i * 4 + 2] = 0x00;                                         /* set green */
         temp[4 + i * 4 + 3] = 0x00;                                         /* set red */
     }
-    temp[4 + len * 4 + 0] = 0xFF;                                           /* end frame */
-    temp[4 + len * 4 + 1] = 0xFF;                                           /* end frame */
-    temp[4 + len * 4 + 2] = 0xFF;                                           /* end frame */
-    temp[4 + len * 4 + 3] = 0xFF;                                           /* end frame */
+    for (i = 0; i < end_bytes; i++)                                         /* set the end frame */
+    {
+        temp[4 + len * 4 + i] = 0xFF;                                       /* fill with 1 * n */
+    }
     
     if (handle->spi_write_cmd(temp, (uint16_t)byte_size) != 0)              /* write command */
     {
